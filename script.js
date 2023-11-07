@@ -10,29 +10,54 @@ class snail{
     }
 }
 
-const Tom = new snail('Dom')
-
 console.log(Tom.speed)
 
 
 //use a query selector to read two separate keys on the computer.
 // The keys I want to select for snail 1 are 'A', 'W', 'S', 'D'
 // The keys I want to select for snail 2 are 'Left', 'Up', 'Down', 'Right'
-window.addEventListener('keyup', e =>{
+window.addEventListener('keydown', e =>{
     console.log(e)
-    Tom.move();
-    Tom.move();
-    Tom.move();
+    if(e.keyCode === 68){
+        Tom.move();   
+    }
     console.log(Tom.speed)
     if(Tom.speed>=100){
         console.log("1ST CHECKPOINT")
+        const stats = document.querySelector('#P1')
+        stats.textContent =`${Tom.name} has reached CP1`
     }if(Tom.speed>=150){
         console.log("& 2ND CHECKPOINT")
+        const stats = document.querySelector('#P1')
+        stats.textContent =`${Tom.name} has reached CP2`
     }if(Tom.speed>=200){
+        const stats = document.querySelector('#P1')
+        stats.textContent =`${Tom.name} Finished the Race`
     }
     const check = document.querySelector('.count')
-    check.textContent =`${Tom.speed}`
+    check.textContent =`Dom Tomato: ${Tom.speed}`
 })
+// window.addEventListener('keydown', e =>{
+//     console.log(e)
+//     if(e.keyCode === 68){
+//         Tom.move();   
+//     }
+//     console.log(Tom.speed)
+//     if(Tom.speed>=100){
+//         console.log("1ST CHECKPOINT")
+//         const stats = document.querySelector('#P1')
+//         stats.textContent =`${Tom.name} has reached CP1`
+//     }if(Tom.speed>=150){
+//         console.log("& 2ND CHECKPOINT")
+//         const stats = document.querySelector('#P1')
+//         stats.textContent =`${Tom.name} has reached CP2`
+//     }if(Tom.speed>=200){
+//         const stats = document.querySelector('#P1')
+//         stats.textContent =`${Tom.name} Finished the Race`
+//     }
+//     const check = document.querySelector('.count')
+//     check.textContent =`Dom Tomato: ${Tom.speed}`
+// })
 
 //Create a function that moves to images accross the screen 
 // in incredibly small units depending on if you tap the specific key,
