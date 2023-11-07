@@ -3,19 +3,32 @@
 class snail{
     constructor(name){
         this.name =name
-        this.speed = 7
+        this.speed = 5
+        this.wins =0
     }
     move(){
         this.speed ++
     }
+    rewards(){
+        this.wins ++
+    }
 }
 
-console.log(Tom.speed)
+const Tom = new snail('Dom Tomato')
+const Brian = new snail('Brian o Corn')
 
+console.log(Tom.speed)
+console.log(Brian.speed)
 
 //use a query selector to read two separate keys on the computer.
 // The keys I want to select for snail 1 are 'A', 'W', 'S', 'D'
 // The keys I want to select for snail 2 are 'Left', 'Up', 'Down', 'Right'
+
+//Create a function that moves to images accross the screen 
+// in incredibly small units depending on if you tap the specific key,
+// to start players will need to spam one key on their available set,
+//Player 1: 'D'
+//Player 2: 'Right'
 window.addEventListener('keydown', e =>{
     console.log(e)
     if(e.keyCode === 68){
@@ -34,36 +47,31 @@ window.addEventListener('keydown', e =>{
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} Finished the Race`
     }
-    const check = document.querySelector('.count')
-    check.textContent =`Dom Tomato: ${Tom.speed}`
-})
-// window.addEventListener('keydown', e =>{
-//     console.log(e)
-//     if(e.keyCode === 68){
-//         Tom.move();   
-//     }
-//     console.log(Tom.speed)
-//     if(Tom.speed>=100){
-//         console.log("1ST CHECKPOINT")
-//         const stats = document.querySelector('#P1')
-//         stats.textContent =`${Tom.name} has reached CP1`
-//     }if(Tom.speed>=150){
-//         console.log("& 2ND CHECKPOINT")
-//         const stats = document.querySelector('#P1')
-//         stats.textContent =`${Tom.name} has reached CP2`
-//     }if(Tom.speed>=200){
-//         const stats = document.querySelector('#P1')
-//         stats.textContent =`${Tom.name} Finished the Race`
-//     }
-//     const check = document.querySelector('.count')
-//     check.textContent =`Dom Tomato: ${Tom.speed}`
-// })
+    const check = document.querySelector('.p1')
+    check.textContent =`${Tom.name}: ${Tom.speed}`
+});
 
-//Create a function that moves to images accross the screen 
-// in incredibly small units depending on if you tap the specific key,
-// to start players will need to spam one key on their available set,
-//Player 1: 'D'
-//Player 2: 'Right'
+window.addEventListener('keydown', e =>{
+    console.log(e)
+    if(e.keyCode === 39){
+        Brian.move();   
+    }
+    console.log(Brian.speed)
+    if(Brian.speed>=100){
+        console.log("1ST CHECKPOINT")
+        const stats = document.querySelector('#P2')
+        stats.textContent =`${Brian.name} has reached CP1`
+    }if(Brian.speed>=150){
+        console.log("& 2ND CHECKPOINT")
+        const stats = document.querySelector('#P2')
+        stats.textContent =`${Brian.name} has reached CP2`
+    }if(Brian.speed>=200){
+        const stats = document.querySelector('#P2')
+        stats.textContent =`${Brian.name} Finished the Race`
+    }
+    const check = document.querySelector('.p2')
+    check.textContent =`${Brian.name}: ${Brian.speed}`
+});
 
 //Create a function that reads if the snail has reached a check point so that once you
 // it starts asking for a sequence of keys such as doing a pattern.
@@ -109,3 +117,7 @@ window.addEventListener('keydown', e =>{
     //Scissors vs Scissors = stalemate
     //if stalemate then repeat timer
 //Once someone wins this declare the winning RPS winner as the TURBO THUNDER SNAIL RACING CHAMPION!!!
+
+
+//Add a function that changes the rounds
+//It should be 3 races long and be best out of three
