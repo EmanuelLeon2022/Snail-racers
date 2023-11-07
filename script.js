@@ -18,11 +18,18 @@ console.log(Tom.speed)
 //use a query selector to read two separate keys on the computer.
 // The keys I want to select for snail 1 are 'A', 'W', 'S', 'D'
 // The keys I want to select for snail 2 are 'Left', 'Up', 'Down', 'Right'
-const run = document.querySelector('.run')
-run.addEventListener('click', ()=>{
+window.addEventListener('keyup', e =>{
+    console.log(e)
     Tom.move();
     Tom.move();
     Tom.move();
+    console.log(Tom.speed)
+    if(Tom.speed>=100){
+        console.log("1ST CHECKPOINT")
+    }if(Tom.speed>=150){
+        console.log("& 2ND CHECKPOINT")
+    }if(Tom.speed>=200){
+    }
     const check = document.querySelector('.count')
     check.textContent =`${Tom.speed}`
 })
