@@ -22,11 +22,19 @@ h1{
     padding-left: 40px;
     color: red;
     background-color: rgb(0, 151, 238);
-    border-radius: 10px;
+    border-radius: 8px;
     width: 550px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+.stats{
+    width: 300px;
+    background-color: rgb(0, 151, 238);
+    border-radius: 8px;
+}
+#lead{
     color: white;
 }

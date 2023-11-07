@@ -20,6 +20,16 @@ const Brian = new snail('Brian o Corn')
 console.log(Tom.speed)
 console.log(Brian.speed)
 
+function score(){
+    if(Tom.speed > Brian.speed){
+        const lead = document.querySelector('#lead')
+        lead.textContent =`${Tom.name} IS IN THE LEAD`
+    } if(Tom.speed < Brian.speed){
+        const lead = document.querySelector('#lead')
+        lead.textContent =`${Brian.name} IS IN THE LEAD`
+    }
+}
+
 //use a query selector to read two separate keys on the computer.
 // The keys I want to select for snail 1 are 'A', 'W', 'S', 'D'
 // The keys I want to select for snail 2 are 'Left', 'Up', 'Down', 'Right'
@@ -38,17 +48,18 @@ window.addEventListener('keyup', e =>{
     if(Tom.speed>=100){
         console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P1')
-        stats.textContent =`${Tom.name} has reached CP1`
+        stats.textContent =`   ${Tom.name} has reached CHECK PT1`
     }if(Tom.speed>=150){
         console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P1')
-        stats.textContent =`${Tom.name} has reached CP2`
+        stats.textContent =`   ${Tom.name} has reached CHECK PT 2`
     }if(Tom.speed>=200){
         const stats = document.querySelector('#P1')
-        stats.textContent =`${Tom.name} Finished the Race`
+        stats.textContent =`   ${Tom.name} Finished the Race`
     }
     const check = document.querySelector('.p1')
     check.textContent =`${Tom.name}: ${Tom.speed}`
+    score();
 });
 
 window.addEventListener('keyup', e =>{
@@ -60,17 +71,18 @@ window.addEventListener('keyup', e =>{
     if(Brian.speed>=100){
         console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P2')
-        stats.textContent =`${Brian.name} has reached CP1`
+        stats.textContent =`   ${Brian.name} has reached CHECK PT1`
     }if(Brian.speed>=150){
         console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P2')
-        stats.textContent =`${Brian.name} has reached CP2`
+        stats.textContent =`   ${Brian.name} has reached CHECK PT2`
     }if(Brian.speed>=200){
         const stats = document.querySelector('#P2')
-        stats.textContent =`${Brian.name} Finished the Race`
+        stats.textContent =`   ${Brian.name} Finished the Race`
     }
     const check = document.querySelector('.p2')
     check.textContent =`${Brian.name}: ${Brian.speed}`
+    score();
 });
 
 //Create a function that reads if the snail has reached a check point so that once you
