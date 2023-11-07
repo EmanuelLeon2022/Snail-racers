@@ -1,0 +1,26 @@
+html,
+body{
+    background-color: black;
+}
+.stands{  
+    background-image: url(fans.gif);
+    background-repeat: repeat-x;
+    height: 100px;
+}
+.trck{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+h1{
+    padding-left: 40px;
+    color: red;
+    background-color: rgb(0, 151, 238);
+    border-radius: 10px;
+    width: 550px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p{
+    color: white;
+}
