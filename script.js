@@ -29,7 +29,7 @@ console.log(Brian.speed)
 // to start players will need to spam one key on their available set,
 //Player 1: 'D'
 //Player 2: 'Right'
-window.addEventListener('keydown', e =>{
+window.addEventListener('keyup', e =>{
     console.log(e)
     if(e.keyCode === 68){
         Tom.move();   
@@ -51,7 +51,7 @@ window.addEventListener('keydown', e =>{
     check.textContent =`${Tom.name}: ${Tom.speed}`
 });
 
-window.addEventListener('keydown', e =>{
+window.addEventListener('keyup', e =>{
     console.log(e)
     if(e.keyCode === 39){
         Brian.move();   

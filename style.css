@@ -13,11 +13,11 @@ body{
     justify-content: center;
     width: auto;
 }
-.stats{
-    /* display: flex;
+/* .stats{
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end; */
-}
+    justify-content: flex-end;
+} */
 h1{
     padding-left: 40px;
     color: red;
