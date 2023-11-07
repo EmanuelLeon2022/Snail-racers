@@ -39,6 +39,7 @@ function score(){
 // to start players will need to spam one key on their available set,
 //Player 1: 'D'
 //Player 2: 'Right'
+
 window.addEventListener('keyup', e =>{
     console.log(e)
     if(e.keyCode === 68){
@@ -48,14 +49,15 @@ window.addEventListener('keyup', e =>{
     if(Tom.speed>=100){
         console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P1')
-        stats.textContent =`   ${Tom.name} has reached CHECK PT1`
-    }if(Tom.speed>=150){
+        stats.textContent =`${Tom.name} has reached CHECK PT1`
+    }
+    if(Tom.speed>=150){
         console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P1')
-        stats.textContent =`   ${Tom.name} has reached CHECK PT 2`
+        stats.textContent =`${Tom.name} has reached CHECK PT 2`
     }if(Tom.speed>=200){
         const stats = document.querySelector('#P1')
-        stats.textContent =`   ${Tom.name} Finished the Race`
+        stats.textContent =`${Tom.name} Finished the Race`
     }
     const check = document.querySelector('.p1')
     check.textContent =`${Tom.name}: ${Tom.speed}`
@@ -71,30 +73,31 @@ window.addEventListener('keyup', e =>{
     if(Brian.speed>=100){
         console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P2')
-        stats.textContent =`   ${Brian.name} has reached CHECK PT1`
+        stats.textContent =`${Brian.name} has reached CHECK PT1`
     }if(Brian.speed>=150){
         console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P2')
-        stats.textContent =`   ${Brian.name} has reached CHECK PT2`
+        stats.textContent =`${Brian.name} has reached CHECK PT2`
     }if(Brian.speed>=200){
         const stats = document.querySelector('#P2')
-        stats.textContent =`   ${Brian.name} Finished the Race`
+        stats.textContent =`${Brian.name} Finished the Race`
     }
     const check = document.querySelector('.p2')
     check.textContent =`${Brian.name}: ${Brian.speed}`
     score();
 });
 
+
+
 //Create a function that reads if the snail has reached a check point so that once you
 // it starts asking for a sequence of keys such as doing a pattern.
 //Player 1 'w','s','a','d','w','s','a','d','w','s','a','d'
 //Player 2 'up', down', 'left', 'right', 'up', down', 'left', 'right', 'up', 'down', 'left', 'right','up', 'down', 'left', 'right'
 
+
 //Once again create a function for that when you reach the second checkpoint your
 //snail will start going faster than the beginning, while still requiring you
 //spam a key on the keyboard.
-//Player 1: 'A'
-//Player 2: 'Left'
 
 //Lastly create a function that sees which snail crossed the finish line first
 //This will declare the person to have crossed the finish line first as the TURBO THUNDER SNAIL RACING CHAMPION!!!
