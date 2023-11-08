@@ -16,11 +16,11 @@ class snail{
     // Once the other snail has reached the finish line before yours has. This should make the
     // winner function work better
     lose(){
-        this.speed++;
+        this.speed++
         this.speed--;
     }
     rewards(){
-        this.wins ++
+        this.wins =+ 1 
     }
 }
 
@@ -59,10 +59,15 @@ function endRace(){
 // on each snail, and from that determine if one has the speed larger than the other than that means
 // the that the larger number is the winner. It does require a stopping counter which is my main issue at the moment
 function winner(){
-    if(Tom.speed > Brian.speed){
+    if(Tom.speed==31){
         Tom.rewards();
+        console.log(Tom.wins)
+        const leader =document.querySelector('#leader')
+        leader.textContent = `${Tom.wins}` 
     } if(Tom.speed < Brian.speed){
         Brian.rewards();
+        const leader =document.querySelector('#leader')
+        leader.textContent = `${Brian.wins}`
     }
 }
 //use a query selector to read two separate keys on the computer.
@@ -90,13 +95,20 @@ window.addEventListener('keyup', e =>{
     }if(Tom.speed>=30){
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} Finished the Race`
-    }for (i=0; i< 10; i++){
-        
+    }if(Tom.speed==31){
+        Tom.stop();
+        Tom.move();
+        Tom.stop();
+        Brian.speed = 0
+    }if(Brian.speed==31){
+        Tom.stop();
+        Tom.move();
+        Tom.stop();
+        Tom.speed = 0
     }
     const check = document.querySelector('.p1')
     check.textContent =`${Tom.name}: ${Tom.speed}`
     score();
-    winner();
 });
 
 window.addEventListener('keyup', e =>{
@@ -117,12 +129,19 @@ window.addEventListener('keyup', e =>{
         Brian.stop();
         Brian.move();
         Brian.stop();
+        Tom.speed = 0
+    }if(Tom.speed==31){
+        Brian.stop();
+        Brian.move();
+        Brian.stop();
+        Brian.speed =0
     }
     const check = document.querySelector('.p2')
     check.textContent =`${Brian.name}: ${Brian.speed}`
     score();
 });
 
+console.log(Brian.wins)
 //Create a function that reads if the snail has reached a check point so that once you
 // it starts asking for a sequence of keys such as doing a pattern.
 //Player 1 'w','s','a','d','w','s','a','d','w','s','a','d'

@@ -2,7 +2,10 @@
 
 //Documentation:
 
-//translateY: https://stackoverflow.com/questions/20707991/css-tranformtranslatey-from-javascript
+//Snail movement measurement
+//              https://github.com/EmanuelLeon2022/Wk4day4lab/blob/main/hw4.js
+
+//translateY:   https://stackoverflow.com/questions/20707991/css-tranformtranslatey-from-javascript
 
 //keyselectors: https://iamhuzaifa.medium.com/keyboard-event-codes-javascript-project-aec43bb7bf79
 //              https://developer.mozilla.org/en-US/docs/Web/API/Element/keypress_event
@@ -11,4 +14,3 @@
 //              https://www.codemahal.com/keyboard-events-in-javascript
 
 //using break and continue:
-
