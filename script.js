@@ -50,7 +50,6 @@ function winner(){
     } if(Tom.speed < Brian.speed){
         Brian.rewards();
     }
-    
 }
 //use a query selector to read two separate keys on the computer.
 // The keys I want to select for snail 1 are 'A', 'W', 'S', 'D'
@@ -68,12 +67,10 @@ window.addEventListener('keyup', e =>{
     }
     console.log(Tom.speed)
     if(Tom.speed>=10){
-        console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} has reached CHECK PT1`
     }
     if(Tom.speed>=20){
-        console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} has reached CHECK PT 2`
     }if(Tom.speed>=30){
@@ -82,7 +79,9 @@ window.addEventListener('keyup', e =>{
     }if(Tom.speed==31){
         Tom.stop();
         Tom.move();
-        Tom.stop()
+        Tom.stop();
+    }if(Brian.speed==31){
+        breTom.move();
     }
     const check = document.querySelector('.p1')
     check.textContent =`${Tom.name}: ${Tom.speed}`
@@ -96,11 +95,9 @@ window.addEventListener('keyup', e =>{
     }
     console.log(Brian.speed)
     if(Brian.speed>=10){
-        console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} has reached CHECK PT1`
     }if(Brian.speed>=20){
-        console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} has reached CHECK PT2`
     }if(Brian.speed>=30){
@@ -110,7 +107,6 @@ window.addEventListener('keyup', e =>{
         Brian.stop();
         Brian.move();
         Brian.stop();
-        Tom.lose();
     }
     const check = document.querySelector('.p2')
     check.textContent =`${Brian.name}: ${Brian.speed}`
