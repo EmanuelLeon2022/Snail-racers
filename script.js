@@ -3,14 +3,21 @@
 class snail{
     constructor(name){
         this.name =name
-        this.speed = 0
-        this.wins =0
+        this.speed = 1
+        this.wins = 0
     }
     move(){
         this.speed ++
     }
     stop(){
         this.speed--
+    }
+    // In theory the way the lose method should work is by stopping the snail in its tracks
+    // Once the other snail has reached the finish line before yours has. This should make the
+    // winner function work better
+    lose(){
+        this.speed++;
+        this.speed--;
     }
     rewards(){
         this.wins ++
@@ -23,6 +30,7 @@ const Brian = new snail('Brian o Corn')
 console.log(Tom.speed)
 console.log(Brian.speed)
 
+// This function should determine which snil is in the lead. This is not the final decision maker.
 function score(){
     if(Tom.speed > Brian.speed){
         const lead = document.querySelector('#lead')
@@ -32,7 +40,18 @@ function score(){
         lead.textContent =`${Brian.name} IS IN THE LEAD`
     }
 }
-
+// This function is meatn to determine who is the winner at the end of the race
+// The way it should work is that it should read the to numbers labelled as this.speed
+// on each snail, and from that determine if one has the speed larger than the other than that means
+// the that the larger number is the winner. It does require a stopping counter which is my main issue at the moment
+function winner(){
+    if(Tom.speed > Brian.speed){
+        Tom.rewards();
+    } if(Tom.speed < Brian.speed){
+        Brian.rewards();
+    }
+    
+}
 //use a query selector to read two separate keys on the computer.
 // The keys I want to select for snail 1 are 'A', 'W', 'S', 'D'
 // The keys I want to select for snail 2 are 'Left', 'Up', 'Down', 'Right'
@@ -61,13 +80,14 @@ window.addEventListener('keyup', e =>{
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} Finished the Race`
     }if(Tom.speed==31){
+        Tom.stop();
         Tom.move();
-        Tom.stop();
-        Tom.stop();
+        Tom.stop()
     }
     const check = document.querySelector('.p1')
     check.textContent =`${Tom.name}: ${Tom.speed}`
     score();
+    winner();
 });
 
 window.addEventListener('keyup', e =>{
@@ -86,18 +106,16 @@ window.addEventListener('keyup', e =>{
     }if(Brian.speed>=30){
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} Finished the Race`
-    }
-    if(Brian.speed==31){
+    }if(Brian.speed==31){
+        Brian.stop();
         Brian.move();
         Brian.stop();
-        Brian.stop();
+        Tom.lose();
     }
     const check = document.querySelector('.p2')
     check.textContent =`${Brian.name}: ${Brian.speed}`
     score();
 });
-console.log(Brian.speed)
-
 
 //Create a function that reads if the snail has reached a check point so that once you
 // it starts asking for a sequence of keys such as doing a pattern.
