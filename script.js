@@ -3,11 +3,14 @@
 class snail{
     constructor(name){
         this.name =name
-        this.speed = 5
+        this.speed = 0
         this.wins =0
     }
     move(){
         this.speed ++
+    }
+    stop(){
+        this.speed--
     }
     rewards(){
         this.wins ++
@@ -41,23 +44,26 @@ function score(){
 //Player 2: 'Right'
 
 window.addEventListener('keyup', e =>{
-    console.log(e)
     if(e.keyCode === 68){
         Tom.move();   
     }
     console.log(Tom.speed)
-    if(Tom.speed>=100){
+    if(Tom.speed>=10){
         console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} has reached CHECK PT1`
     }
-    if(Tom.speed>=150){
+    if(Tom.speed>=20){
         console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} has reached CHECK PT 2`
-    }if(Tom.speed>=200){
+    }if(Tom.speed>=30){
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} Finished the Race`
+    }if(Tom.speed==31){
+        Tom.move();
+        Tom.stop();
+        Tom.stop();
     }
     const check = document.querySelector('.p1')
     check.textContent =`${Tom.name}: ${Tom.speed}`
@@ -65,28 +71,32 @@ window.addEventListener('keyup', e =>{
 });
 
 window.addEventListener('keyup', e =>{
-    console.log(e)
     if(e.keyCode === 39){
         Brian.move();   
     }
     console.log(Brian.speed)
-    if(Brian.speed>=100){
+    if(Brian.speed>=10){
         console.log("1ST CHECKPOINT")
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} has reached CHECK PT1`
-    }if(Brian.speed>=150){
+    }if(Brian.speed>=20){
         console.log("& 2ND CHECKPOINT")
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} has reached CHECK PT2`
-    }if(Brian.speed>=200){
+    }if(Brian.speed>=30){
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} Finished the Race`
+    }
+    if(Brian.speed==31){
+        Brian.move();
+        Brian.stop();
+        Brian.stop();
     }
     const check = document.querySelector('.p2')
     check.textContent =`${Brian.name}: ${Brian.speed}`
     score();
 });
-
+console.log(Brian.speed)
 
 
 //Create a function that reads if the snail has reached a check point so that once you
