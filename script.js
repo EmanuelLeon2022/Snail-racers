@@ -40,6 +40,20 @@ function score(){
         lead.textContent =`${Brian.name} IS IN THE LEAD`
     }
 }
+
+//This should hopefully work as a stopping function for the snails
+function endRace(){
+    if(Tom.speed==31){
+        Tom.stop();
+        Tom.move();
+        Tom.stop();
+        Brian.stop
+        Brian.move();
+        Brian.stop();
+    }
+}
+
+
 // This function is meatn to determine who is the winner at the end of the race
 // The way it should work is that it should read the to numbers labelled as this.speed
 // on each snail, and from that determine if one has the speed larger than the other than that means
@@ -76,12 +90,8 @@ window.addEventListener('keyup', e =>{
     }if(Tom.speed>=30){
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} Finished the Race`
-    }if(Tom.speed==31){
-        Tom.stop();
-        Tom.move();
-        Tom.stop();
-    }if(Brian.speed==31){
-        breTom.move();
+    }for (i=0; i< 10; i++){
+        
     }
     const check = document.querySelector('.p1')
     check.textContent =`${Tom.name}: ${Tom.speed}`
