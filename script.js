@@ -15,15 +15,27 @@ class snail{
     rewards(){
         this.wins++ 
     }
+    revoke(){
+        this.wins--
+    }
 }
 
 const Tom = new snail('Dom Tomato')
-// for(let i=0; i>3; i++){
-//     Tom.rewards()
-// }
+for(let i=0; i>3; i++){
+    Tom.rewards()
+}if(Tom.wins>=3){
+    Tom.revoke();
+    Tom.rewards();
+    Tom.revoke();
+}
 const Brian = new snail('Brian o Corn')
-// for(let i=0; i>3; i++){
-//     Brian.rewards()
+for(let i=0; i>3; i++){
+    Brian.rewards()
+}
+// if(Brian.wins>=3){
+//     Brian.revoke();
+//     Brian.wins();
+//     Brian.revoke();
 // }
 
 console.log(Tom.speed)
@@ -103,7 +115,8 @@ s1.addEventListener('ketyup', e =>{
     }
 })
 
-document.getElementById('snail1').style.position =`translate(${Tom.speed}px)`
+document.getElementById('snail1').style.position =`translate-X(500px)`
+
 
 window.addEventListener('keyup', e =>{
     if(e.keyCode === 39){
