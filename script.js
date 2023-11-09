@@ -37,10 +37,13 @@ function score(){
 function champ(){
     if(Tom.wins>=2 && Brian.wins<=1){
         const lead = document.querySelector('#lead')
-        lead.textContent =`${Tom.name} WINS`
+        lead.textContent =`${Tom.wins} - ${Brian.wins} ${Tom.name} WINS`
     }if(Brian.wins>=2 && Tom.wins<=1){
         const lead = document.querySelector('#lead')
-        lead.textContent =`${Brian.name} WINS`
+        lead.textContent =`${Tom.wins} - ${Brian.wins} ${Brian.name} WINS`
+    }if(Brian.wins==1 && Tom.wins ==1){
+        const lead = document.querySelector('#leader')
+        lead.textContent =`${Tom.wins} - ${Brian.wins}TIE` 
     }
 }
 
@@ -50,14 +53,14 @@ function champ(){
 // the that the larger number is the winner. It does require a stopping counter which is my main issue at the moment
 
 function winner(){
-    if(Tom.speed==30 && Brian.speed == 0){
+    if(Tom.speed==300 && Brian.speed == 0){
         Tom.rewards();
         // const leader = document.querySelector('#lead')
         // leader.textContent = `${Tom.wins}`
         const triumph = document.querySelector('#leader')
         triumph.textContent =`${Tom.wins} - ${Brian.wins}`
         Tom.speed = 0
-    } if(Brian.speed==30 && Tom.speed == 0){
+    } if(Brian.speed==300 && Tom.speed == 0){
         Brian.rewards();
         const triumph = document.querySelector('#leader')
         triumph.textContent =`${Tom.wins} - ${Brian.wins}`
@@ -77,22 +80,22 @@ window.addEventListener('keyup', e =>{
         Tom.move();   
     }
     console.log(Tom.speed)
-    if(Tom.speed>=10){
+    if(Tom.speed>=100){
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} has reached CHECK PT1`
     }
-    if(Tom.speed>=20){
+    if(Tom.speed>=200){
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} has reached CHECK PT 2`
-    }if(Tom.speed>=30){
+    }if(Tom.speed>=300){
         const stats = document.querySelector('#P1')
         stats.textContent =`${Tom.name} Finished the Race`
-    }if(Tom.speed==31){
+    }if(Tom.speed==301){
         Tom.stop();
         Tom.move();
         Tom.stop();
         Brian.speed = 0
-    }if(Brian.speed==31){
+    }if(Brian.speed==301){
         Tom.stop();
         Tom.move();
         Tom.stop();
@@ -110,21 +113,21 @@ window.addEventListener('keyup', e =>{
         Brian.move();   
     }
     console.log(Brian.speed)
-    if(Brian.speed>=10){
+    if(Brian.speed>=100){
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} has reached CHECK PT1`
-    }if(Brian.speed>=20){
+    }if(Brian.speed>=200){
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} has reached CHECK PT2`
-    }if(Brian.speed>=30){
+    }if(Brian.speed>=300){
         const stats = document.querySelector('#P2')
         stats.textContent =`${Brian.name} Finished the Race`
-    }if(Brian.speed==31){
+    }if(Brian.speed==301){
         Brian.stop();
         Brian.move();
         Brian.stop();
         Tom.speed = 0
-    }if(Tom.speed==31){
+    }if(Tom.speed==301){
         Brian.stop();
         Brian.move();
         Brian.stop();
