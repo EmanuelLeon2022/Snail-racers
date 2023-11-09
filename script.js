@@ -21,7 +21,7 @@ class snail{
 }
 
 const Tom = new snail('Dom Tomato')
-const Brian = new snail('Brian o Corn')
+const Brian = new snail('Brian Corn')
 
 console.log(Tom.speed)
 console.log(Brian.speed)
@@ -156,6 +156,3 @@ window.addEventListener('keyup', e =>{
 // it starts asking for a sequence of keys such as doing a pattern.
 //Player 1 'w','s','a','d','w','s','a','d','w','s','a','d'
 //Player 2 'up', down', 'left', 'right', 'up', down', 'left', 'right', 'up', 'down', 'left', 'right','up', 'down', 'left', 'right'
-
-
-//THIS WILL BE ONLY IF PLAYER CHOOSES TO DO RPS INSTEAD OF COIN FLIP
