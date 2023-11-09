@@ -10,8 +10,7 @@ body{
 .trck{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: auto;
+    width: 500px;
 }
 /* .stats{
     display: flex;
@@ -40,24 +39,14 @@ p{
     flex-direction: column;
 }
 #s1{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 #s2{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 #lead{
     color: white;
     width: 350px;
-}
-
-
-@keyframes run{
-    from{
-        transform: translateX();
-    }
-    to{
-        transform: translateX();
-    }
 }

@@ -36,8 +36,8 @@ function score(){
 
 function champ(){
     if(Tom.wins>=2 && Brian.wins<=1){
-        const lead = document.querySelector('#lead')
-        lead.textContent =`${Tom.wins} - ${Brian.wins} ${Tom.name} WINS`
+        // const lead = document.querySelector('#lead')
+        // lead.textContent =`${Tom.wins} - ${Brian.wins} ${Tom.name} WINS`
     }if(Brian.wins>=2 && Tom.wins<=1){
         const lead = document.querySelector('#lead')
         lead.textContent =`${Tom.wins} - ${Brian.wins} ${Brian.name} WINS`
@@ -66,8 +66,11 @@ function winner(){
         triumph.textContent =`${Tom.wins} - ${Brian.wins}`
         Brian.speed = 0
     }
-} //note once one snails reaches the finish line, both their counters will reset.
+}
 
+//note once one snails reaches the finish line, both their counters will reset.
+//Add a function that changes the rounds
+//It should be 3 races long and be best out of three
 
 //Create a function that moves to images accross the screen 
 // in incredibly small units depending on if you tap the specific key,
@@ -154,28 +157,3 @@ window.addEventListener('keyup', e =>{
 // if the value is 1, than player 1 wins, if the value is 0 than player 2 will win.
 
 //THIS WILL BE ONLY IF PLAYER CHOOSES TO DO RPS INSTEAD OF COIN FLIP
-
-//If Rock Paper Scissors
-//then create a timer to choose what item you will use.
-//Player 1:
-    //Rock = 'A'
-    //Paper = 'S'
-    //Scissors = 'D'
-//Player 2:
-    //Rock = 'Left'
-    //Paper = 'Down'
-    //Scissors = 'Right'
-//If timer is still going hit 'W'/'Up' to store your item
-//Once timer is finished it evaluates these truths
-    //Rock beats Scissors
-    //Rock vs Rock = stalemate
-    //Paper beats rock
-    //Paper vs Paper = stalemate
-    //Scissors beats paper
-    //Scissors vs Scissors = stalemate
-    //if stalemate then repeat timer
-//Once someone wins this declare the winning RPS winner as the TURBO THUNDER SNAIL RACING CHAMPION!!!
-
-
-//Add a function that changes the rounds
-//It should be 3 races long and be best out of three
