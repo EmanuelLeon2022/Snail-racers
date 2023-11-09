@@ -21,22 +21,7 @@ class snail{
 }
 
 const Tom = new snail('Dom Tomato')
-for(let i=0; i>3; i++){
-    Tom.rewards()
-}if(Tom.wins>=3){
-    Tom.revoke();
-    Tom.rewards();
-    Tom.revoke();
-}
 const Brian = new snail('Brian o Corn')
-for(let i=0; i>3; i++){
-    Brian.rewards()
-}
-// if(Brian.wins>=3){
-//     Brian.revoke();
-//     Brian.wins();
-//     Brian.revoke();
-// }
 
 console.log(Tom.speed)
 console.log(Brian.speed)
