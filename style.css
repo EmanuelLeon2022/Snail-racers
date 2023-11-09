@@ -10,7 +10,7 @@ body{
 .trck{
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 300px;
 }
 /* .stats{
     display: flex;
@@ -37,7 +37,6 @@ p{
 .racers{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 #s1{
     width: 50px;
