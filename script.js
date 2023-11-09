@@ -18,7 +18,13 @@ class snail{
 }
 
 const Tom = new snail('Dom Tomato')
+// for(let i=0; i>3; i++){
+//     Tom.rewards()
+// }
 const Brian = new snail('Brian o Corn')
+// for(let i=0; i>3; i++){
+//     Brian.rewards()
+// }
 
 console.log(Tom.speed)
 console.log(Brian.speed)
@@ -39,27 +45,30 @@ function score(){
 // on each snail, and from that determine if one has the speed larger than the other than that means
 // the that the larger number is the winner. It does require a stopping counter which is my main issue at the moment
 function winner(){
-    if(Tom.speed==31 && Brian.speed == 0){
+    if(Tom.speed==30 && Brian.speed == 0){
         Tom.rewards();
-        console.log(Tom.wins)
-        const leader =document.querySelector('#leader')
+
         leader.textContent = `${Tom.wins}` 
-    } if(Brian.speed==31 && Tom.speed == 0){
+    } if(Brian.speed==30 && Tom.speed == 0){
         Brian.rewards();
         console.log(Brian.wins)
-        const leader =document.querySelector('#leader')
-        leader.textContent = `${Brian.wins}`
     }
 }
-//use a query selector to read two separate keys on the computer.
-// The keys I want to select for snail 1 are 'A', 'W', 'S', 'D'
-// The keys I want to select for snail 2 are 'Left', 'Up', 'Down', 'Right'
+
+const triumph = document.querySelector('#leader')
+triumph.textContent =`${Tom.wins}-${Brian.wins}`
 
 //Create a function that moves to images accross the screen 
 // in incredibly small units depending on if you tap the specific key,
 // to start players will need to spam one key on their available set,
 //Player 1: 'D'
 //Player 2: 'Right'
+const Tomato =document.querySelector('#snail1')
+Tomato.addEventListener('keyup',e =>{
+    if(e.keyCode==68){
+        
+    }
+})
 
 window.addEventListener('keyup', e =>{
     if(e.keyCode === 68){
