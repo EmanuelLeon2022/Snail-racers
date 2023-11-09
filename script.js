@@ -63,12 +63,12 @@ triumph.textContent =`${Tom.wins}-${Brian.wins}`
 // to start players will need to spam one key on their available set,
 //Player 1: 'D'
 //Player 2: 'Right'
-const Tomato =document.querySelector('#snail1')
-Tomato.addEventListener('keyup',e =>{
-    if(e.keyCode==68){
+// const Tomato =document.querySelector('#snail1')
+// Tomato.addEventListener('keyup',e =>{
+//     if(e.keyCode==68){
         
-    }
-})
+//     }
+// })
 
 window.addEventListener('keyup', e =>{
     if(e.keyCode === 68){
