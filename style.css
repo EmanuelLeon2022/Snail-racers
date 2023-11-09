@@ -1,6 +1,6 @@
 html,
 body{
-    background-color: black;
+    background-image: url(background.png);
 }
 .stands{  
     background-image: url(fans.gif);
