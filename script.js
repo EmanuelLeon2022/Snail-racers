@@ -95,7 +95,7 @@ window.addEventListener('keyup', e =>{
         stats.textContent =`${Tom.name} has reached CHECK PT 2`
     }if(Tom.speed>=300){
         const stats = document.querySelector('#P1')
-        stats.textContent =`${Tom.name} Finished the Race`
+        stats.textContent =`${Tom.name} Finished a lap`
     }if(Tom.speed==301){
         Tom.stop();
         Tom.move();
@@ -129,7 +129,7 @@ window.addEventListener('keyup', e =>{
         stats.textContent =`${Brian.name} has reached CHECK PT2`
     }if(Brian.speed>=300){
         const stats = document.querySelector('#P2')
-        stats.textContent =`${Brian.name} Finished the Race`
+        stats.textContent =`${Brian.name} Finished a lap`
     }if(Brian.speed==301){
         Brian.stop();
         Brian.move();
