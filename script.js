@@ -15,6 +15,9 @@ class snail{
     rewards(){
         this.wins ++
     }
+    run(){
+        this.speed *= 5
+    }
 }
 
 const Tom = new snail('Dom Tomato')
@@ -109,6 +112,8 @@ window.addEventListener('keyup', e =>{
     score();
     winner();
     champ();
+    const red = document.getElementById('s1')
+    red.style.transform = `translate(${Tom.speed}px) `
 });
 
 window.addEventListener('keyup', e =>{
@@ -141,9 +146,9 @@ window.addEventListener('keyup', e =>{
     score();
     winner();
     champ();
+    const blue = document.getElementById('s2')
+    blue.style.transform = `translate(${Brian.speed}px) `
 });
-
-
 
 //Create a function that reads if the snail has reached a check point so that once you
 // it starts asking for a sequence of keys such as doing a pattern.
