@@ -37,6 +37,8 @@ function score(){
     }
 }
 
+//Lastly create a function that sees which snail crossed the finish line first
+//This will declare the person to have crossed the finish line first as the TURBO THUNDER SNAIL RACING CHAMPION!!!
 function champ(){
     if(Tom.wins>=2 && Brian.wins<=1){
         // const lead = document.querySelector('#lead')
@@ -155,10 +157,5 @@ window.addEventListener('keyup', e =>{
 //Player 1 'w','s','a','d','w','s','a','d','w','s','a','d'
 //Player 2 'up', down', 'left', 'right', 'up', down', 'left', 'right', 'up', 'down', 'left', 'right','up', 'down', 'left', 'right'
 
-//Lastly create a function that sees which snail crossed the finish line first
-//This will declare the person to have crossed the finish line first as the TURBO THUNDER SNAIL RACING CHAMPION!!!
-
-//If flip a coin, make a function that math randoms a 1 or a 0
-// if the value is 1, than player 1 wins, if the value is 0 than player 2 will win.
 
 //THIS WILL BE ONLY IF PLAYER CHOOSES TO DO RPS INSTEAD OF COIN FLIP

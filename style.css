@@ -5,18 +5,13 @@ body{
 .stands{  
     background-image: url(fans.gif);
     background-repeat: repeat-x;
-    height: 130px;
+    height: 100px;
 }
 .trck{
     display: flex;
     align-items: center;
     width: 300px;
 }
-/* .stats{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-} */
 h1{
     padding-left: 40px;
     color: red;
