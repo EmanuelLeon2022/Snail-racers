@@ -13,10 +13,7 @@ class snail{
         this.speed--
     }
     rewards(){
-        this.wins++ 
-    }
-    revoke(){
-        this.wins--
+        this.wins ++
     }
 }
 
@@ -44,15 +41,19 @@ function score(){
 function winner(){
     if(Tom.speed==30 && Brian.speed == 0){
         Tom.rewards();
-
-        leader.textContent = `${Tom.wins}` 
+        // const leader = document.querySelector('#lead')
+        // leader.textContent = `${Tom.wins}`
+        const triumph = document.querySelector('#leader')
+        triumph.textContent =`${Tom.wins} - ${Brian.wins}`
+        Tom.speed = 0
     } if(Brian.speed==30 && Tom.speed == 0){
         Brian.rewards();
+        const triumph = document.querySelector('#leader')
+        triumph.textContent =`${Tom.wins} - ${Brian.wins}`
+        Brian.speed = 0
     }
 }
 
-const triumph = document.querySelector('#leader')
-triumph.textContent =`${Tom.wins} & ${Brian.wins}`
 
 //Create a function that moves to images accross the screen 
 // in incredibly small units depending on if you tap the specific key,
