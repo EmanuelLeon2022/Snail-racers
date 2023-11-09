@@ -35,6 +35,10 @@ p{
     background-color: rgb(0, 151, 238);
     border-radius: 8px;
 }
+.racers{
+    display: flex;
+    flex-direction: column;
+}
 #lead{
     color: white;
     width: 350px;
@@ -46,7 +50,6 @@ p{
 #snail2{
     position: absolute;
     display: flex;
-    animation-name: run;
 }
 
 

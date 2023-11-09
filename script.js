@@ -48,12 +48,11 @@ function winner(){
         leader.textContent = `${Tom.wins}` 
     } if(Brian.speed==30 && Tom.speed == 0){
         Brian.rewards();
-        console.log(Brian.wins)
     }
 }
 
 const triumph = document.querySelector('#leader')
-triumph.textContent =`${Tom.wins}-${Brian.wins}`
+triumph.textContent =`${Tom.wins} & ${Brian.wins}`
 
 //Create a function that moves to images accross the screen 
 // in incredibly small units depending on if you tap the specific key,
@@ -92,16 +91,6 @@ window.addEventListener('keyup', e =>{
     score();
     winner();
 });
-
-const s1 =document.querySelector('#snail1')
-s1.addEventListener('ketyup', e =>{
-    if(e.keyCode === 68){
-        document.getElementById('snail1').style.position =`translate-x(${Tom.speed}px)`
-    }
-})
-
-document.getElementById('snail1').style.position =`translate-X(500px)`
-
 
 window.addEventListener('keyup', e =>{
     if(e.keyCode === 39){
