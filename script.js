@@ -63,12 +63,6 @@ triumph.textContent =`${Tom.wins}-${Brian.wins}`
 // to start players will need to spam one key on their available set,
 //Player 1: 'D'
 //Player 2: 'Right'
-// const Tomato =document.querySelector('#snail1')
-// Tomato.addEventListener('keyup',e =>{
-//     if(e.keyCode==68){
-        
-//     }
-// })
 
 window.addEventListener('keyup', e =>{
     if(e.keyCode === 68){
@@ -102,6 +96,15 @@ window.addEventListener('keyup', e =>{
     winner();
 });
 
+const s1 =document.querySelector('#snail1')
+s1.addEventListener('ketyup', e =>{
+    if(e.keyCode === 68){
+        document.getElementById('snail1').style.position =`translate-x(${Tom.speed}px)`
+    }
+})
+
+document.getElementById('snail1').style.position =`translate(${Tom.speed}px)`
+
 window.addEventListener('keyup', e =>{
     if(e.keyCode === 39){
         Brian.move();   
@@ -132,6 +135,8 @@ window.addEventListener('keyup', e =>{
     score();
     winner();
 });
+
+
 
 //Create a function that reads if the snail has reached a check point so that once you
 // it starts asking for a sequence of keys such as doing a pattern.

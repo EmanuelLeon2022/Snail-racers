@@ -39,20 +39,22 @@ p{
     color: white;
     width: 350px;
 }
-#snail1 ::cue{
-    animation: 5s;
-    animation-name: run;
+#snail1{
+    position: absolute;
+    display: flex;
 }
 #snail2{
-    animation: 5s;
+    position: absolute;
+    display: flex;
     animation-name: run;
 }
 
+
 @keyframes run{
     from{
-        transform: translateX(0px);
+        transform: translateX();
     }
     to{
-        transform: translateX(10px);
+        transform: translateX();
     }
 }
