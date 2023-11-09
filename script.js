@@ -113,7 +113,7 @@ window.addEventListener('keyup', e =>{
     winner();
     champ();
     const red = document.getElementById('s1')
-    red.style.transform = `translate(${Tom.speed}px) `
+    red.style.transform = `translate(${Tom.speed *3}px) `
 });
 
 window.addEventListener('keyup', e =>{
@@ -147,7 +147,7 @@ window.addEventListener('keyup', e =>{
     winner();
     champ();
     const blue = document.getElementById('s2')
-    blue.style.transform = `translate(${Brian.speed}px) `
+    blue.style.transform = `translate(${Brian.speed * 3}px) `
 });
 
 //Create a function that reads if the snail has reached a check point so that once you
