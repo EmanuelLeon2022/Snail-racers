@@ -34,10 +34,21 @@ function score(){
     }
 }
 
+function champ(){
+    if(Tom.wins>=2 && Brian.wins<=1){
+        const lead = document.querySelector('#lead')
+        lead.textContent =`${Tom.name} WINS`
+    }if(Brian.wins>=2 && Tom.wins<=1){
+        const lead = document.querySelector('#lead')
+        lead.textContent =`${Brian.name} WINS`
+    }
+}
+
 // This function is meatn to determine who is the winner at the end of the race
 // The way it should work is that it should read the to numbers labelled as this.speed
 // on each snail, and from that determine if one has the speed larger than the other than that means
 // the that the larger number is the winner. It does require a stopping counter which is my main issue at the moment
+
 function winner(){
     if(Tom.speed==30 && Brian.speed == 0){
         Tom.rewards();
@@ -52,7 +63,7 @@ function winner(){
         triumph.textContent =`${Tom.wins} - ${Brian.wins}`
         Brian.speed = 0
     }
-}
+} //note once one snails reaches the finish line, both their counters will reset.
 
 
 //Create a function that moves to images accross the screen 
@@ -91,6 +102,7 @@ window.addEventListener('keyup', e =>{
     check.textContent =`${Tom.name}: ${Tom.speed}`
     score();
     winner();
+    champ();
 });
 
 window.addEventListener('keyup', e =>{
@@ -122,6 +134,7 @@ window.addEventListener('keyup', e =>{
     check.textContent =`${Brian.name}: ${Brian.speed}`
     score();
     winner();
+    champ();
 });
 
 
@@ -131,18 +144,8 @@ window.addEventListener('keyup', e =>{
 //Player 1 'w','s','a','d','w','s','a','d','w','s','a','d'
 //Player 2 'up', down', 'left', 'right', 'up', down', 'left', 'right', 'up', 'down', 'left', 'right','up', 'down', 'left', 'right'
 
-
-//Once again create a function for that when you reach the second checkpoint your
-//snail will start going faster than the beginning, while still requiring you
-//spam a key on the keyboard.
-
 //Lastly create a function that sees which snail crossed the finish line first
 //This will declare the person to have crossed the finish line first as the TURBO THUNDER SNAIL RACING CHAMPION!!!
-
-// From there also create atie function that determinse that if you both were
-// in between a 5px range at the finish line, have a rematch, flip a coin, or do RPS(Rock, Paper, Scissors)"P.S. I MIGHT NOT DO THIS YET DUE TO POSSIBLE TIME AND CODING ISSUES"
-
-//If rematch it will reset the entire race and you start of with the same controls.
 
 //If flip a coin, make a function that math randoms a 1 or a 0
 // if the value is 1, than player 1 wins, if the value is 0 than player 2 will win.
