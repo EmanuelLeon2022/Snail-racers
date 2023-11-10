@@ -3,7 +3,7 @@
 class snail{
     constructor(name){
         this.name =name
-        this.speed = 1
+        this.speed = 0
         this.wins = 0
     }
     move(){
@@ -14,9 +14,6 @@ class snail{
     }
     rewards(){
         this.wins ++
-    }
-    run(){
-        this.speed *= 5
     }
 }
 
@@ -41,8 +38,8 @@ function score(){
 //This will declare the person to have crossed the finish line first as the TURBO THUNDER SNAIL RACING CHAMPION!!!
 function champ(){
     if(Tom.wins>=2 && Brian.wins<=1){
-        // const lead = document.querySelector('#lead')
-        // lead.textContent =`${Tom.wins} - ${Brian.wins} ${Tom.name} WINS`
+        const lead = document.querySelector('#lead')
+        lead.textContent =`${Tom.wins} - ${Brian.wins} ${Tom.name} WINS`
     }if(Brian.wins>=2 && Tom.wins<=1){
         const lead = document.querySelector('#lead')
         lead.textContent =`${Tom.wins} - ${Brian.wins} ${Brian.name} WINS`
@@ -151,8 +148,3 @@ window.addEventListener('keyup', e =>{
     const blue = document.getElementById('s2')
     blue.style.transform = `translate(${Brian.speed * 3}px) `
 });
-
-//Create a function that reads if the snail has reached a check point so that once you
-// it starts asking for a sequence of keys such as doing a pattern.
-//Player 1 'w','s','a','d','w','s','a','d','w','s','a','d'
-//Player 2 'up', down', 'left', 'right', 'up', down', 'left', 'right', 'up', 'down', 'left', 'right','up', 'down', 'left', 'right'
