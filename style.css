@@ -26,7 +26,7 @@ p{
 }
 .stats{
     width: 300px;
-    background-color: rgb(0, 151, 238);
+    background-color: rgb(202, 238, 0);
     border-radius: 8px;
 }
 .racers{
@@ -47,11 +47,11 @@ p{
     width: 350px;
 }
 .p1{
-    background-color: red;
+    background-color: rgb(240, 55, 55);
     border-radius: 5px;
 }
 .p2{
-    background-color: blue;
+    background-color: rgb(0, 119, 255);
     border-radius: 5px;
 }
 .Credits{
