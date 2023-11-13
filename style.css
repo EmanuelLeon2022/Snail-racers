@@ -15,14 +15,14 @@ body{
 h1{
     padding-left: 40px;
     color: black;
-    background-color: rgb(0, 151, 238);
+    background-color: rgb(0, 238, 107);
     border-radius: 8px;
     width: 550px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+    color: black;
 }
 .stats{
     width: 300px;
@@ -43,7 +43,7 @@ p{
     height: 50px;
 }
 #lead{
-    color: white;
+    color: black;
     width: 350px;
 }
 .p1{
