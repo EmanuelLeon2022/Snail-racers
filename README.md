@@ -2,9 +2,7 @@
 
 ## The Story:
 
-### The race to determine who is the FASTEST, most FURIOUS, most BESTEST snail in all of TWILIGHT GARDEN
-Dom Tomato stands the champion of all the gardens, but a rising up racer Brian Corn decides to challenge
-him on in the EPIC TURBO THUNDER SNAIL RACE
+### The race to determine who is the FASTEST, most FURIOUS, most BESTEST snail in all of TWILIGHT GARDEN Dom Tomato stands the champion of all the gardens, but a rising up racer Brian Corn decides to challenge him on in the EPIC TURBO THUNDER SNAIL RACE
 
 ## The Rules:
 ### Player 1 is to spam the 'D' key in order to encourage Dom to reach the finish line.
